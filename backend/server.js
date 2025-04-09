@@ -11,7 +11,14 @@ connectDB();
 const app = express();
 
 // Middleware
-app.use(cors()); // Enable CORS for all requests
+// app.use(cors()); // Enable CORS for all requests
+
+app.use(cors({
+    origin: 'https://kudos-ten-cyan.vercel.app', // Replace with your frontend URL
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true,
+})); // Enable CORS for specific origin
+
 app.use(express.json()); // Parse JSON bodies
 app.use(express.urlencoded({ extended: true })); // Parse URL-encoded data
 
