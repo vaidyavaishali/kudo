@@ -13,11 +13,18 @@ const app = express();
 // Middleware
 // app.use(cors()); // Enable CORS for all requests
 
+const allowedOrigins = ['https://kudospot-web-app.vercel.app'];
+
 app.use(cors({
-    origin: 'https://kudospot-web-app.vercel.app/', // Replace with your frontend URL
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    credentials: true,
-})); // Enable CORS for specific origin
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true,
+}));
 
 app.use(express.json()); // Parse JSON bodies
 app.use(express.urlencoded({ extended: true })); // Parse URL-encoded data
