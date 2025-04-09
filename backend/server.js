@@ -14,7 +14,7 @@ const app = express();
 // app.use(cors()); // Enable CORS for all requests
 
 app.use(cors({
-    origin: 'https://kudos-ten-cyan.vercel.app', // Replace with your frontend URL
+    origin: 'https://kudospot-web-app.vercel.app/', // Replace with your frontend URL
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
 })); // Enable CORS for specific origin
