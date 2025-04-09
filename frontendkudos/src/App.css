@@ -1,0 +1,88 @@
+/* Hide Scrollbar */
+.custom-scrollbar {
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and other WebKit-based browsers */
+};
+
+/* Bubble Background */
+.bubble-bg, 
+.bubble-down {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.bubble-bg {
+  background: linear-gradient(to bottom, #e5e2e2, #eef2f3);
+}
+
+.bubble-bg::before,
+.bubble-bg::after,
+.bubble-down::before,
+.bubble-down::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: transparent; /* Semi-transparent white */
+  box-shadow: 0 15px 15px 10px inset rgba(0, 9, 14, 0.1);
+  animation: float 6s infinite ease-in-out;
+}
+
+/* Upward Bubbles */
+.bubble-1::before {
+  width: 100px;
+  height: 100px;
+  top: 10%;
+  left: 15%;
+  animation-delay: 0s;
+}
+
+.bubble-2::before {
+  width: 120px;
+  height: 120px;
+  top: 12%;
+  left: 25%;
+  animation-delay: 1s;
+}
+
+.bubble-3::before {
+  width: 50px;
+  height: 50px;
+  top: 2%;
+  left: 25%;
+  animation-delay: 2s;
+}
+
+/* Downward Bubbles */
+.bubble-down-1::before {
+  width: 120px;
+  height: 120px;
+  bottom: 20%;
+  right: 20%;
+  animation-delay: 0s;
+}
+
+.bubble-down-2::before {
+  width: 80px;
+  height: 80px;
+  bottom: 15%;
+  right: 30%;
+  animation-delay: 1s;
+}
+
+.bubble-down-3::before {
+  width: 50px;
+  height: 50px;
+  bottom: 10%;
+  right: 40%;
+  animation-delay: 2s;
+}
+
