@@ -13,7 +13,7 @@ const LoginPage = () => {
       <div className="bubble-bg bubble-3"></div>
       <div className="bubble-bg bubble-down-1"></div>
       <div className="bubble-bg bubble-down-2"></div>
-      <div className="bubble-bg bubble-down-3"></div> 
+      <div className="bubble-bg bubble-down-3"></div>
 
       {/* Main Content */}
       <div className="text-center relative z-10">
@@ -24,9 +24,8 @@ const LoginPage = () => {
         <div className="relative w-full max-w-md">
           <input
             type="text"
-            className={`w-full px-4 py-3 text-lg italic font-semibold border rounded-lg shadow focus:outline-none focus:ring text-center ${
-              loginError ? 'border-red-500 focus:ring-red-300' : 'focus:ring-blue-300'
-            }`}
+            className={`w-full px-4 py-3 text-lg italic font-semibold border rounded-lg shadow focus:outline-none focus:ring text-center ${loginError ? 'border-red-500 focus:ring-red-300' : 'focus:ring-blue-300'
+              }`}
             placeholder="Enter your Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -39,10 +38,10 @@ const LoginPage = () => {
         >
           Login
         </button>
-        <Link>
-        <p className="mt-4 text-gray-600">Sign up for new account</p>
+        <Link to={"/register"} className="mt-4 text-blue-600 hover:text-blue-800 hover:font-semibold"> <Span>Sign up</Span>  </Link>
+        <p className="mt-4 text-gray-600"> for new account</p>
 
-        </Link>
+
       </div>
     </div>
   );
