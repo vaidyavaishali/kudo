@@ -41,7 +41,7 @@ const GiveKudosPage = () => {
         }
 
         try {
-            const response = await axios.post("https://kudospot.vercel.app/api/kudos/send", {
+            const response = await axios.post("https://kudo-api-nine.vercel.app/api/kudos/send", {
                 recipient: user,
                 message: { badge, badgeicon: kudosBadge.find(b => b.title === badge)?.icon },
                 reason,

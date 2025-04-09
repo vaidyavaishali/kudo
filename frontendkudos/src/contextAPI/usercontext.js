@@ -20,7 +20,7 @@ export const UserContextProvider = ({ children }) => {
         }
         try {
             setloginError(false);
-            const response = await axios.post('https://kudospot.vercel.app/api/users/login', { email });
+            const response = await axios.post('https://kudo-api-nine.vercel.app/api/users/login', { email });
             if (response.status === 200) {
                 const user = response.data?.user;
                 if (user) {

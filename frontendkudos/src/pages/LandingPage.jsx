@@ -25,7 +25,7 @@ function LandingPage() {
   const handleLike = async (kudoId) => {
     setIsLoading(true);
     try {
-      const response = await axios.put(`https://conscientious-tech-cms.vercel.app/api/kudos/${kudoId}/like`, {
+      const response = await axios.put(`https://kudo-api-nine.vercel.app/api/kudos/${kudoId}/like`, {
         userId,
         userName,
       });

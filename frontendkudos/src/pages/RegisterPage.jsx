@@ -24,7 +24,7 @@ function RegisterPage() {
 
         if (!hasError) {
             try {
-                const response = await fetch('https://conscientious-tech-cms.vercel.app/api/users/add', {
+                const response = await fetch('https://kudo-api-nine.vercel.app/api/users/add', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
