@@ -72,7 +72,7 @@ export const UserContextProvider = ({ children }) => {
     }, [])
     const fetchAllKudos = async () => {
         try {
-            const response = await axios.get("https://kudospot.vercel.app/api/kudos/get");
+            const response = await axios.get("https://kudo-api-nine.vercel.app/api/kudos/get");
             setKudos(response.data.data);
         } catch (error) {
             console.error("Error fetching kudos:", error);
